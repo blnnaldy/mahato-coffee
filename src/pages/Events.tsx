@@ -125,13 +125,11 @@ const ActivitiesPage = () => {
                 }`}
               >
                 <div className={`grid ${event.featured ? 'lg:grid-cols-2' : 'grid-cols-1'} gap-0`}>
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden aspect-[4/3]">
                     <img
                       src={event.image}
                       alt={event.title}
-                      className={`w-full object-cover group-hover:scale-110 transition-transform duration-500 ${
-                        event.featured ? 'h-64 lg:h-full' : 'h-48'
-                      }`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4 flex gap-2">
                       <Badge className="bg-accent text-accent-foreground">
