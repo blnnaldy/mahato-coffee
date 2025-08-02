@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Coffee, Users, Award, Heart, Target, Eye } from "lucide-react";
-import interiorImage from "@/assets/interior.jpg";
+import outletImage from "@/assets/outlet.jpg";
 
 const AboutPage = () => {
   const team = [
@@ -90,7 +90,7 @@ const AboutPage = () => {
             
             <div className="relative animate-fade-in">
               <img 
-                src={interiorImage} 
+                src={outletImage} 
                 alt="Coffee Mahato Story" 
                 className="w-full h-[500px] object-cover rounded-2xl shadow-card"
               />
