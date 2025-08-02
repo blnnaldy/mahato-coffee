@@ -23,7 +23,7 @@ const Contact = () => {
       icon: Mail,
       title: "Email",
       content: ["hello@mahatoidn.com", "reservation@coffeemahato.com"],
-      link: "mailto:hello@coffeemahato.com"
+      link: "mahatoidn@gmail.com"
     },
     {
       icon: Clock,
