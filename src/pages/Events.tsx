@@ -6,45 +6,46 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Users, ArrowRight } from "lucide-react";
 import interiorImage from "@/assets/interior.jpg";
 import heroImage from "@/assets/hero-rooftop.jpg";
+import eventMusic from "@/assets/event music.jpg";
 
 const ActivitiesPage = () => {
   const upcomingEvents = [
     {
       id: 1,
-      title: "Jazz Night Under The Stars",
+      title: "Sewa Avenue Roofop",
       location: "Rooftop Main Stage",
       capacity: "80 orang",
-      description: "Nikmati malam yang romantis dengan live jazz performance dan pemandangan Jakarta yang memukau",
+      description: "Untuk Weeding Dan Event Lainnya",
       image: heroImage,
-      category: "Live Music Acoustic",
+      category: "Sewa Avenue",
       featured: true
     },
     {
       id: 2,
-      title: "Coffee Cupping Workshop",
-      location: "Private Room",
-      capacity: "15 orang",
-      description: "Pelajari seni mencicipi kopi dengan barista profesional kami",
-      image: interiorImage,
-      category: "Workshop",
+      title: "Live Music Acoustic",
+      location: "Exterior Lounge",
+      capacity: "50 orang",
+      description: "Nikmati musik akustik dari musisi lokal setiap akhir pekan",
+      image: eventMusic,
+      category: "Live Music Acoustic",
       featured: false
     },
     {
       id: 3,
-      title: "Yoga Sunset",
+      title: "Birthday Package",
       location: "Rooftop Terrace",
-      capacity: "25 orang",
-      description: "Yoga santai sambil menikmati sunset Jakarta yang spektakuler",
+      capacity: "50 orang",
+      description: "Paket ulang tahun lengkap dengan dekorasi dan catering",
       image: heroImage,
-      category: "Sewa Avenue",
+      category: "Birthday Package",
       featured: false
     },
     {
       id: 4,
-      title: "Nobar & Dinner",
+      title: "Nobar Live Timnas",
       location: "Rooftop Premium Area",
-      capacity: "40 orang",
-      description: "Dinner romantis dengan menu spesial dan live acoustic music",
+      capacity: "50 orang",
+      description: "Nonton bareng pertandingan timnas dengan suasana yang meriah",
       image: heroImage,
       category: "Event Nobar Timnas",
       featured: true
