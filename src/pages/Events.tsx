@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Users, ArrowRight } from "lucide-react";
 import interiorImage from "@/assets/interior.jpg";
 import heroImage from "@/assets/hero-rooftop.jpg";
-import eventMusic from "@/assets/event music.jpg";
+import eventMusic from "@/assets/event-music.jpg";
 
 const ActivitiesPage = () => {
   const upcomingEvents = [
