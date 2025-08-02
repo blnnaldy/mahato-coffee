@@ -2,7 +2,7 @@ import logoMahato from "@/assets/logo.mahato.jpeg";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Coffee } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,23 +28,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-md shadow-soft" : "bg-transparent"
-      }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-md shadow-soft" : "bg-transparent"}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="relative">
-              <Coffee className="h-8 w-8 text-primary group-hover:animate-float" />
-              <div className="absolute -inset-1 bg-gradient-ocean rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-lg text-foreground leading-none">
-                Mahato Coffee
-
-
-              </span>
-            </div>
+          {/* Logo + Brand */}
+          <Link to="/" className="flex items-center space-x-3 group">
+            <img src={logoMahato} alt="Logo Mahato" className="h-10 w-auto object-contain" />
+            <span className="font-bold text-lg text-foreground leading-none">Mahato Coffee</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -54,13 +44,12 @@ const Navbar = () => {
                 key={item.path}
                 to={item.path}
                 className={`text-sm font-medium transition-colors duration-200 relative group ${location.pathname === item.path
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
+                  ? "text-primary"
+                  : "text-foreground hover:text-primary"
                   }`}
               >
                 {item.name}
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full ${location.pathname === item.path ? "w-full" : ""
-                  }`}></span>
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full ${location.pathname === item.path ? "w-full" : ""}`}></span>
               </Link>
             ))}
           </div>
@@ -98,8 +87,8 @@ const Navbar = () => {
                   to={item.path}
                   onClick={() => setIsOpen(false)}
                   className={`block px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${location.pathname === item.path
-                      ? "text-primary bg-primary/10"
-                      : "text-foreground hover:text-primary hover:bg-muted"
+                    ? "text-primary bg-primary/10"
+                    : "text-foreground hover:text-primary hover:bg-muted"
                     }`}
                 >
                   {item.name}
