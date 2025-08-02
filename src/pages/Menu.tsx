@@ -44,7 +44,7 @@ const MenuPage = () => {
         {
           name: "Flat White Australia",
           description: "Double shot espresso dengan microfoam steamed milk",
-          price: "Rp 42.000",
+
           image: coffeeHero,
           rating: 4.8,
           isSignature: false,
@@ -59,7 +59,7 @@ const MenuPage = () => {
         {
           name: "Rooftop Sunrise Coffee",
           description: "Cold brew dengan sirup karamel dan whipped cream",
-          price: "Rp 42.000",
+
           image: coffeeHero,
           rating: 4.7,
           isSignature: true,
@@ -68,7 +68,7 @@ const MenuPage = () => {
         {
           name: "Iced Latte Vanilla",
           description: "Espresso dengan cold milk dan vanilla syrup yang menyegarkan",
-          price: "Rp 40.000",
+
           image: coffeeHero,
           rating: 4.6,
           isSignature: false,
@@ -77,7 +77,7 @@ const MenuPage = () => {
         {
           name: "Cold Brew Original",
           description: "12-hour cold extracted coffee, smooth dan naturally sweet",
-          price: "Rp 35.000",
+
           image: coffeeHero,
           rating: 4.5,
           isSignature: false,
@@ -92,7 +92,7 @@ const MenuPage = () => {
         {
           name: "Ocean Blue Smoothie",
           description: "Smoothie segar dengan kombinasi blueberry dan coconut",
-          price: "Rp 38.000",
+
           image: menuItems,
           rating: 4.8,
           isSignature: true,
@@ -101,7 +101,7 @@ const MenuPage = () => {
         {
           name: "Matcha Latte Premium",
           description: "Japanese matcha powder dengan steamed milk",
-          price: "Rp 43.000",
+
           image: menuItems,
           rating: 4.7,
           isSignature: false,
@@ -110,7 +110,7 @@ const MenuPage = () => {
         {
           name: "Chocolate Heaven",
           description: "Rich hot chocolate dengan whipped cream dan marshmallow",
-          price: "Rp 36.000",
+
           image: menuItems,
           rating: 4.6,
           isSignature: false,
@@ -125,7 +125,7 @@ const MenuPage = () => {
         {
           name: "Jakarta Skyline Cake",
           description: "Layer cake dengan vanilla cream dan fresh strawberry",
-          price: "Rp 35.000",
+
           image: menuItems,
           rating: 4.9,
           isSignature: true,
@@ -134,7 +134,7 @@ const MenuPage = () => {
         {
           name: "Croissant Butter",
           description: "Freshly baked croissant dengan premium butter",
-          price: "Rp 28.000",
+
           image: menuItems,
           rating: 4.5,
           isSignature: false,
@@ -143,7 +143,7 @@ const MenuPage = () => {
         {
           name: "Avocado Toast",
           description: "Multigrain bread dengan mashed avocado dan poached egg",
-          price: "Rp 45.000",
+
           image: menuItems,
           rating: 4.7,
           isSignature: false,
@@ -156,7 +156,7 @@ const MenuPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-sky">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -190,8 +190,8 @@ const MenuPage = () => {
             <div className="flex flex-col lg:flex-row gap-8 mb-12">
               <TabsList className="grid w-full lg:w-auto grid-cols-2 lg:grid-cols-1 lg:h-auto bg-muted/50 p-1">
                 {menuCategories.map((category) => (
-                  <TabsTrigger 
-                    key={category.id} 
+                  <TabsTrigger
+                    key={category.id}
                     value={category.id}
                     className="lg:justify-start lg:px-6 lg:py-3 data-[state=active]:bg-primary data-[state=active]:text-white"
                   >
@@ -214,11 +214,19 @@ const MenuPage = () => {
                 </Button>
                 <Button variant="outline" size="sm">
                   NON COFFEE
-                  </Button>
+                </Button>
                 <Button variant="outline" size="sm">
                   YOGURT SERIES
-                  
+                  <Button variant="outline" size="sm">
+                    FLAVOUR TEA
+                  </Button>
+                  <Button variant="outline" size="sm">
+                    FOOD & DESSERT
+                  </Button>
+
+
                 </Button>
+
               </div>
             </div>
 
@@ -227,13 +235,13 @@ const MenuPage = () => {
               <TabsContent key={category.id} value={category.id} className="mt-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.items.map((item, index) => (
-                    <Card 
-                      key={index} 
+                    <Card
+                      key={index}
                       className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden"
                     >
                       <div className="relative overflow-hidden">
-                        <img 
-                          src={item.image} 
+                        <img
+                          src={item.image}
                           alt={item.name}
                           className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                         />
@@ -249,15 +257,15 @@ const MenuPage = () => {
                             </Badge>
                           )}
                         </div>
-                        <Button 
-                          variant="ghost" 
-                          size="sm" 
+                        <Button
+                          variant="ghost"
+                          size="sm"
                           className="absolute top-3 right-3 h-8 w-8 rounded-full bg-background/90 hover:bg-background text-foreground hover:text-primary"
                         >
                           <Heart className="h-4 w-4" />
                         </Button>
                       </div>
-                      
+
                       <CardContent className="p-6">
                         <div className="flex items-center justify-between mb-2">
                           <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
@@ -268,21 +276,16 @@ const MenuPage = () => {
                             <span className="text-sm font-medium text-foreground">{item.rating}</span>
                           </div>
                         </div>
-                        
+
                         <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
                           {item.description}
                         </p>
-                        
+
                         <div className="flex items-center justify-between">
                           <span className="text-xl font-bold text-primary">
                             {item.price}
                           </span>
-                          <Button 
-                            size="sm" 
-                            className="bg-primary hover:bg-primary-dark text-white"
-                          >
-                            Pesan Sekarang
-                          </Button>
+
                         </div>
                       </CardContent>
                     </Card>
