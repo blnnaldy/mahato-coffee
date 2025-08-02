@@ -194,7 +194,7 @@ const Contact = () => {
                 <Button 
                   variant="outline" 
                   className="mt-4"
-                  onClick={() => window.open('https://maps.app.goo.gl/rcxAVM35JK3rHhq79', '_blank')}
+                  onClick={() => window.open('https://www.google.com/maps/place/Mahato+Coffee+Rooftop/@-6.2000936,106.7876543,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f781f7ed59ad:0xc1cc5eb5e9a26b84!8m2!3d-6.2000936!4d106.7876543!16s%2Fg%2F11sg_fl3m6?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D', '_blank')}
                 >
                   Buka di Google Maps
                 </Button>
